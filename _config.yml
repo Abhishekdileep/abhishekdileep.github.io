@@ -1,0 +1,31 @@
+title: Abhishek Dileep
+tagline: Audio ML — acoustic scene classification, domain adaptation, speech
+author: Abhishek Dileep
+email: abhishekdileep99@gmail.com
+description: >-
+  Personal site of Abhishek Dileep — M.Tech researcher at IIT Mandi
+  working on acoustic scene classification, unsupervised domain adaptation,
+  and end-to-end speech-to-speech models.
+url: "https://abhishekdileep.github.io"
+baseurl: ""
+
+github_username: abhishekdileep
+linkedin_url: ""   # fill in
+scholar_url: ""    # fill in if you want it shown
+
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
+highlighter: rouge
+timezone: Asia/Kolkata
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
