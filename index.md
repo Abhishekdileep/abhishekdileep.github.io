@@ -11,12 +11,16 @@ I am also a **Project Associate at DRDO–NPOL**, applying the same ideas to son
 
 Acoustic scene classification, domain adaptation, self-supervised audio representation, speech-to-speech models, and lightweight on-device audio.
 
+## Projects
 
-+ ## Projects
-+   - [LLaMA-Omni2.5 …]      → github.com/Abhishekdileep/LLaMA-omni2.5
-+   - [Domain Adaptation …]  → github.com/Abhishekdileep/Domain_adaptation_acoustic_scene_classification
-+   - [Low-Dose to High-Dose CT …] → github.com/Abhishekdileep/Frost_Hack
-+   - [Quantised Side-Tuning …]    → github.com/Abhishekdileep/QST-llama-7b
+- [**LLaMA-Omni2.5 — End-to-End Speech-to-Speech Model**](https://github.com/Abhishekdileep/LLaMA-omni2.5)
+  Coupled a Whisper encoder to a Qwen2.5 LLM for speech-in / speech-out dialogue.
+- [**Domain Adaptation for Acoustic Scene Classification**](https://github.com/Abhishekdileep/Domain_adaptation_acoustic_scene_classification)
+  Compared five adaptation methods for device-invariant acoustic scene classification.
+- [**Low-Dose to High-Dose CT Image Synthesis**](https://github.com/Abhishekdileep/Frost_Hack)
+  GAN-based synthesis of high-dose CT scans from low-dose inputs.
+- [**Quantised Side-Tuning for Parameter-Efficient LLM Fine-Tuning**](https://github.com/Abhishekdileep/QST-llama-7b.git)
+  Reduced trainable parameters for LLaMA-7B while preserving task performance.
 
 ## Recent
 
@@ -24,5 +28,6 @@ Acoustic scene classification, domain adaptation, self-supervised audio represen
 - **2025** — First-author IEEE paper accepted at [ICEI 2025](/research/), IIT Dharwad.
 - **2025** — Project Associate at DRDO–NPOL, working on sonar classification.
 - **2024** — Started M.Tech at IIT Mandi.
+- **2021** - Got disillusioned from CSE and got enamoured with Audio Signal processing in Sony India SARD
 
 See [research](/research/) for papers and projects, [blog](/blog/) for notes, and [cv](/cv/) for the full record.
