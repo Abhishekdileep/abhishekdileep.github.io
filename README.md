@@ -1,8 +1,9 @@
-# abhishekdileep.github.io
+### My web page
+website :  abhishekdileep.github.io
 
 Personal site. Static Jekyll, built by GitHub Pages.
 
-## Local preview (optional)
+<!-- ## Local preview (optional)
 
 ```
 bundle install
@@ -44,4 +45,4 @@ Create `_posts/YYYY-MM-DD-slug.md` with front matter:
 title: "Post title"
 date: YYYY-MM-DD
 ---
-```
+``` -->
