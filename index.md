@@ -11,6 +11,8 @@ I am also a **Project Associate at DRDO–NPOL**, applying the same ideas to son
 
 Acoustic scene classification, domain adaptation, self-supervised audio representation, speech-to-speech models, and lightweight on-device audio.
 
+
+
 ## Recent
 
 - **Sep 2026** — Preparing a second UDA-for-ASC paper targeting ICASSP 2027.
