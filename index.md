@@ -12,6 +12,11 @@ I am also a **Project Associate at DRDO–NPOL**, applying the same ideas to son
 Acoustic scene classification, domain adaptation, self-supervised audio representation, speech-to-speech models, and lightweight on-device audio.
 
 
++ ## Projects
++   - [LLaMA-Omni2.5 …]      → github.com/Abhishekdileep/LLaMA-omni2.5
++   - [Domain Adaptation …]  → github.com/Abhishekdileep/Domain_adaptation_acoustic_scene_classification
++   - [Low-Dose to High-Dose CT …] → github.com/Abhishekdileep/Frost_Hack
++   - [Quantised Side-Tuning …]    → github.com/Abhishekdileep/QST-llama-7b
 
 ## Recent
 
