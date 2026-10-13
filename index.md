@@ -11,6 +11,16 @@ I am also a **Project Associate at DRDO–NPOL**, applying the same ideas to son
 
 Acoustic scene classification, domain adaptation, self-supervised audio representation, speech-to-speech models, and lightweight on-device audio.
 
+## Research
+
+My research focuses on **learning device-invariant audio representations under domain shift**.  My broader interests include domain generalization, self-supervised representation learning, and data augmentation strategies for building robust audio models.
+
+My work in this area includes:
+
+- [**Device Invariance for Acoustic Scene Classification using Domain Adaptation** — ICEI 2025](https://arxiv.org/abs/2607.25887v1), with Padmanabhan Rajan.
+- [**MICDROP: Bridging Device Gaps in Acoustic Scene Classification via Unsupervised Domain Adaptation** — submitted to ICASSP 2027](https://drive.google.com/file/d/1UAEstjOB4aWJhkMeFQnlyW6M4AZ_LmwL/view?usp=sharing), with Padmanabhan Rajan.
+
+
 ## Projects
 
 - [**LLaMA-Omni2.5 — End-to-End Speech-to-Speech Model**](https://github.com/Abhishekdileep/LLaMA-omni2.5)
