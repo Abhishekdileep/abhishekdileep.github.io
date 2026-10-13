@@ -2,4 +2,14 @@
   authors: "Abhishek Dileep, Padmanabhan Rajan"
   venue: "IEEE Conference on Engineering Informatics (ICEI 2025), IIT Dharwad, India"
   year: 2025
-  links: []   # add {name: "arXiv", url: "..."} or {name: "PDF", url: "..."} later
+  links:
+    - name: "arXiv"
+      url: "https://arxiv.org/abs/2607.25887v1"  # add {name: "arXiv", url: "..."} or {name: "PDF", url: "..."} later
+
+- title: "MICDROP: BRIDGING DEVICE GAPS IN ACOUSTIC SCENE CLASSIFICATION VIA UNSUPERVISED DOMAINAD APTATION"
+  authors: "Abhishek Dileep, Padmanabhan Rajan"
+  venue: "Submitted to IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2027)"
+  year: 2027
+  links:
+    - name: "PDF"
+      url: "https://drive.google.com/file/d/1UAEstjOB4aWJhkMeFQnlyW6M4AZ_LmwL/view?usp=sharing"

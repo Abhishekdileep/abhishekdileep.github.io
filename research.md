@@ -13,13 +13,18 @@ permalink: /research/
   <div class="title">{{ pub.title }}</div>
   <div class="meta">{{ pub.authors }}</div>
   <div class="venue">{{ pub.venue }}</div>
+
   {% if pub.links.size > 0 %}
     <div class="meta">
-      {% for link in pub.links %}<a href="{{ link.url }}">{{ link.name }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}
+      {% for link in pub.links %}
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>{% unless forloop.last %} · {% endunless %}
+      {% endfor %}
     </div>
   {% endif %}
 </div>
 {% endfor %}
+
+
 
 ## Projects
 
