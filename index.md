@@ -19,7 +19,8 @@ My work in this area includes:
 
 - [**Device Invariance for Acoustic Scene Classification using Domain Adaptation** — ICEI 2025](https://arxiv.org/abs/2607.25887v1), with Padmanabhan Rajan.
 - [**MICDROP: Bridging Device Gaps in Acoustic Scene Classification via Unsupervised Domain Adaptation** — submitted to ICASSP 2027](https://drive.google.com/file/d/1UAEstjOB4aWJhkMeFQnlyW6M4AZ_LmwL/view?usp=sharing), with Padmanabhan Rajan.
-- [**Open Seminar Slides** - Presented in IIT Mandi SCEE](https://drive.google.com/file/d/1PAsQzByRPZQaMpRqrp4xMqToHt6G0gdm/view?usp=sharing) 
+- [**Open Seminar Slides** - Presented in IIT Mandi SCEE]<p><a href="/assets/files/slides.pdf">Download PDF ↓</a></p>
+ 
 
 ## Projects
 

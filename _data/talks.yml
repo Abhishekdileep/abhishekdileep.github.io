@@ -1,0 +1,6 @@
+- title: "TODO — talk title"
+  date: "TODO"              # e.g. 2025-11-14
+  venue: "IIT Mandi, SCEE Open Seminar"
+  abstract: "TODO — one or two sentences on what the talk covered."
+  slides_url: "/assets/files/slides.pdf"
+  youtube_id: ""            # e.g. "dQw4w9WgXcQ" — leave empty to omit the embed
