@@ -167,8 +167,8 @@ li { margin-bottom: 0.3em; }
   height: auto;
   border-radius: 6px;
   /* mask: sharp in the center, transparent at the edges */
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 45%, transparent 90%);
-          mask-image: radial-gradient(ellipse at center, #000 45%, transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 70%, transparent 100%);
+          mask-image: radial-gradient(ellipse at center, #000 70%, transparent 100%);
 }
 /* first heading inside the text column has extra top margin — kill that
    so the top of the text aligns with the top of the image */
@@ -187,3 +187,15 @@ li { margin-bottom: 0.3em; }
     margin: 0 auto;
   }
 }
+
+
+/* --- per-page pastel palettes ---
+   The body gets a class from default.html based on page.url.
+   Each block overrides the --bg / --accent tokens. Text color
+   stays near-black, set by :root.
+*/
+body.page-home     { --bg: #dde9f5; --accent: #1e3a63; --rule: #c3d3e4; --code-bg: #cfdcee; }
+body.page-research { --bg: #e2f0e5; --accent: #2d5a3d; --rule: #c7dcce; --code-bg: #d5e6d9; }
+body.page-blog     { --bg: #eae4f2; --accent: #5a3a6b; --rule: #d3c9df; --code-bg: #ddd3e8; }
+body.page-talks    { --bg: #f7e8dd; --accent: #8b4a2b; --rule: #e6d0c2; --code-bg: #efd9c9; }
+body.page-cv       { --bg: #f5efdd; --accent: #6b4a2b; --rule: #e0d7c0; --code-bg: #e9dfc9; }

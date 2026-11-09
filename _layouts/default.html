@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 </head>
-<body>
+{% if page.url == "/" %}{% assign page_class = "page-home" %}{% else %}{% assign slug = page.url | replace: "/", "" %}{% assign page_class = "page-" | append: slug %}{% endif %}
+<body class="{{ page_class }}">
   <header class="site-head">
     <a class="site-name" href="{{ '/' | relative_url }}">{{ site.author }}</a>
     <nav class="site-nav">

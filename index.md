@@ -41,6 +41,7 @@ My work in this area includes:
 
 ## Recent
 
+- **Nov 2026** — Published a live demo of a PDE neural solver: [inkl-2023.tail355f98.ts.net](https://inkl-2023.tail355f98.ts.net/).
 - **Sep 2026** — Preparing a second UDA-for-ASC paper targeting ICASSP 2027.
 - **2025** — First-author IEEE paper accepted at [ICEI 2025](/research/), IIT Dharwad.
 - **2025** — Project Associate at DRDO–NPOL, working on sonar classification.
