@@ -145,3 +145,45 @@ li { margin-bottom: 0.3em; }
   width: 100%; height: 100%;
   border: 0;
 }
+
+/* --- About split layout (home page only) --- */
+/* On the home page, <main> gets class "wide" so we can fit two columns. */
+.content.wide { max-width: 980px; }
+
+.about-split {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.about-image {
+  position: sticky;
+  top: 24px;
+  /* vignette fade — image edges dissolve into page background */
+}
+.about-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  /* mask: sharp in the center, transparent at the edges */
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 45%, transparent 90%);
+          mask-image: radial-gradient(ellipse at center, #000 45%, transparent 90%);
+}
+/* first heading inside the text column has extra top margin — kill that
+   so the top of the text aligns with the top of the image */
+.about-text > :first-child { margin-top: 0; }
+
+/* Stack on narrow viewports */
+@media (max-width: 720px) {
+  .content.wide { max-width: 720px; }
+  .about-split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .about-image {
+    position: static;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
