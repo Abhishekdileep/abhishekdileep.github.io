@@ -1,13 +1,8 @@
 ---
-layout: default
+layout: home
 title: About
+theme: paper
 ---
-
-<div class="about-split">
-  <aside class="about-image">
-    <img src="{{ '/assets/images/mine.jpg' | relative_url }}" alt="Abhishek Dileep" loading="eager">
-  </aside>
-  <div class="about-text" markdown="1">
 
 I am **Abhishek Dileep**, an M.Tech (Intelligent Systems) student at **IIT Mandi**, working in the Signal Processing and Deep Learning Laboratory under [Prof. Padmanabhan Rajan](https://faculty.iitmandi.ac.in/~padman/). My research is on **unsupervised domain adaptation for acoustic scene classification** — building classifiers that stay accurate when the recording device changes.
 
@@ -49,6 +44,3 @@ My work in this area includes:
 - **2021** - Got disillusioned from CSE and got enamoured with Audio Signal processing in Sony India SARD
 
 See [research](/research/) for papers and projects, [blog](/blog/) for notes, and [cv](/cv/) for the full record.
-
-  </div>
-</div>

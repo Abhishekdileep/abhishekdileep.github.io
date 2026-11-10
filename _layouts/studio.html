@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.summary | default: page.description | default: site.description | escape }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Martian+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/studio.css' | relative_url }}">
+</head>
+<body class="studio theme-{{ page.theme | default: 'paper' }}">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="s-head">
+    <a class="s-name" href="{{ '/' | relative_url }}">{{ site.author }}</a>
+    <nav class="s-nav" aria-label="Site">
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>about</a>
+      <a href="{{ '/research/' | relative_url }}">research</a>
+      <a href="{{ '/lab/' | relative_url }}"{% if page.url contains '/lab/' %} aria-current="page"{% endif %}>lab</a>
+      <a href="{{ '/blog/' | relative_url }}">blog</a>
+      <a href="{{ '/talks/' | relative_url }}">talks</a>
+      <a href="{{ '/cv/' | relative_url }}">cv</a>
+    </nav>
+  </header>
+
+  <main id="main" class="s-main">
+    {{ content }}
+  </main>
+
+  <footer class="s-foot">
+    <span>© {{ 'now' | date: "%Y" }} {{ site.author }}</span>
+    <span class="s-foot-links">
+      <a href="mailto:{{ site.email }}">email</a>
+      <a href="https://github.com/{{ site.github_username }}">github</a>
+      {% if site.linkedin_url != "" %}<a href="{{ site.linkedin_url }}">linkedin</a>{% endif %}
+      {% if site.scholar_url != "" %}<a href="{{ site.scholar_url }}">scholar</a>{% endif %}
+    </span>
+  </footer>
+
+  <script src="{{ '/assets/js/probe.js' | relative_url }}" defer></script>
+  {% if page.url == '/' %}<script src="{{ '/assets/js/spectrogram.js' | relative_url }}" defer></script>{% endif %}
+  {% if page.url contains '/lab/' %}<script src="{{ '/assets/js/burgers.js' | relative_url }}" defer></script>{% endif %}
+</body>
+</html>

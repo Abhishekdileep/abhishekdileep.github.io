@@ -1,0 +1,48 @@
+---
+layout: studio
+---
+<section class="hero">
+  <p class="eyebrow">{{ site.tagline }}</p>
+  <h1 class="thesis">A classifier should not care which microphone heard the street.</h1>
+
+  <figure class="spec" data-spectrogram>
+    <div class="spec-stage">
+      <div class="spec-plot">
+        <canvas class="spec-canvas" aria-hidden="true"></canvas>
+        <div class="spec-ticks" aria-hidden="true"></div>
+        <span class="spec-axis spec-axis-y" aria-hidden="true">frequency</span>
+        <span class="spec-axis spec-axis-x" aria-hidden="true">time →</span>
+      </div>
+      <div class="spec-resp">
+        <canvas class="resp-canvas" aria-hidden="true"></canvas>
+        <span class="spec-axis spec-axis-r" aria-hidden="true">gain, dB</span>
+      </div>
+    </div>
+
+    <figcaption class="spec-caption">
+      <fieldset class="device-switch">
+        <legend>Recording device</legend>
+        <label><input type="radio" name="device" value="A" checked><span>Device A</span></label>
+        <label><input type="radio" name="device" value="B"><span>Device B</span></label>
+        <label><input type="radio" name="device" value="C"><span>Device C</span></label>
+      </fieldset>
+      <p>
+        One street scene, drawn as a mel spectrogram. Switch the device and the same
+        sound arrives with a different frequency response. My research trains
+        classifiers that ignore that difference.
+        <span class="spec-note">The scene and the device responses are synthetic, made for this illustration.</span>
+      </p>
+    </figcaption>
+  </figure>
+</section>
+
+<div class="about">
+  <aside class="about-side">
+    <img class="portrait" src="{{ '/assets/images/mine.jpg' | relative_url }}" alt="Abhishek Dileep" width="1204" height="1600">
+    {% include lab-status.html %}
+  </aside>
+
+  <article class="prose">
+    {{ content }}
+  </article>
+</div>

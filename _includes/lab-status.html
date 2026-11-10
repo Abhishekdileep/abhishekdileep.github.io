@@ -1,0 +1,14 @@
+{% assign services = site.lab | sort: "order" %}
+<section class="lab-mini" aria-label="Lab services">
+  <h2 class="lab-mini-title"><a href="{{ '/lab/' | relative_url }}">Running in the lab</a></h2>
+  <ul>
+    {% for s in services %}
+    <li>
+      <a href="{{ s.url | relative_url }}">{{ s.short | default: s.title }}</a>
+      <span class="status" data-probe="{% if s.status == 'live' %}{{ s.service_url }}{% endif %}" data-state="{% if s.status == 'live' %}checking{% else %}planned{% endif %}">
+        <i aria-hidden="true"></i><b data-probe-label>{% if s.status == 'live' %}checking{% else %}planned{% endif %}</b>
+      </span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

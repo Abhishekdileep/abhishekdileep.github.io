@@ -1,0 +1,69 @@
+---
+layout: studio
+title: Lab
+theme: night
+permalink: /lab/
+summary: Models running on my own machine, reachable from this page through Tailscale Funnel.
+---
+{% assign services = site.lab | sort: "order" %}
+<section class="lab-hero">
+  <p class="eyebrow">Lab</p>
+  <h1 class="thesis">The lab is a computer in my room.</h1>
+  <p class="lede">
+    This site is static pages on GitHub. The models run on my own machine, and
+    Tailscale Funnel gives that machine a public HTTPS address. When a badge says
+    reachable, you are talking to that computer. When it is switched off, the
+    badge says offline.
+  </p>
+
+  <ol class="route" aria-label="How a request reaches a model">
+    <li>
+      <b>Your browser</b>
+      <span>loads this page</span>
+    </li>
+    <li>
+      <b>GitHub Pages</b>
+      <span>{{ site.url | remove: "https://" }}</span>
+      <span>static files only</span>
+    </li>
+    <li>
+      <b>Tailscale Funnel</b>
+      <span>{{ site.lab_host }}</span>
+      <span>public HTTPS into an encrypted tunnel</span>
+    </li>
+    <li>
+      <b>My machine</b>
+      <span>the model runs here</span>
+    </li>
+  </ol>
+  <p class="route-readout" data-route-readout aria-live="polite">Checking the route…</p>
+</section>
+
+<section class="services" aria-label="Services">
+  {% for s in services %}
+  <article class="card{% if s.status != 'live' %} card-planned{% endif %}">
+    <header>
+      <h2><a href="{{ s.url | relative_url }}">{{ s.title }}</a></h2>
+      <span class="status" data-probe="{% if s.status == 'live' %}{{ s.service_url }}{% endif %}" data-state="{% if s.status == 'live' %}checking{% else %}planned{% endif %}"{% if s.status == 'live' %} data-probe-primary{% endif %}>
+        <i aria-hidden="true"></i><b data-probe-label>{% if s.status == 'live' %}checking{% else %}planned{% endif %}</b>
+      </span>
+    </header>
+
+    <p>{{ s.summary }}</p>
+
+    {% if s.preview == 'burgers' %}
+    {% include burgers-preview.html %}
+    {% endif %}
+
+    {% if s.stack %}<p class="card-stack">{{ s.stack | join: " · " }}</p>{% endif %}
+
+    <p class="card-actions">
+      {% if s.status == 'live' and s.service_url != "" %}
+      <a class="btn" href="{{ s.service_url }}" target="_blank" rel="noopener">Open the service ↗</a>
+      {% endif %}
+      <a class="btn btn-quiet" href="{{ s.url | relative_url }}">Details</a>
+      {% if s.repo and s.repo != "" %}<a class="btn btn-quiet" href="{{ s.repo }}" target="_blank" rel="noopener">Code ↗</a>{% endif %}
+    </p>
+  </article>
+  {% endfor %}
+</section>

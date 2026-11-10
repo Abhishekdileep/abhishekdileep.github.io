@@ -24,8 +24,23 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "lab"
+    values:
+      layout: "lab-service"
+      theme: "night"
+
+# Lab: services running on my own machine, exposed with Tailscale Funnel.
+# One markdown file per service in _lab/. See LAB.md.
+lab_host: "inkl-2023.tail355f98.ts.net"
+collections:
+  lab:
+    output: true
+    permalink: /lab/:name/
 
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - LAB.md

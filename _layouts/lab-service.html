@@ -1,0 +1,44 @@
+---
+layout: studio
+---
+<article class="service">
+  <p class="eyebrow"><a href="{{ '/lab/' | relative_url }}">← Lab</a></p>
+  <h1 class="service-title">{{ page.title }}</h1>
+  <p class="service-summary">{{ page.summary }}</p>
+
+  <div class="service-bar">
+    <span class="status" data-probe="{% if page.status == 'live' %}{{ page.service_url }}{% endif %}" data-state="{% if page.status == 'live' %}checking{% else %}planned{% endif %}">
+      <i aria-hidden="true"></i><b data-probe-label>{% if page.status == 'live' %}checking{% else %}planned{% endif %}</b>
+    </span>
+    {% if page.status == 'live' and page.service_url != "" %}
+    <a class="btn" href="{{ page.service_url }}" target="_blank" rel="noopener">Open the service ↗</a>
+    {% endif %}
+    {% if page.repo and page.repo != "" %}
+    <a class="btn btn-quiet" href="{{ page.repo }}" target="_blank" rel="noopener">Code ↗</a>
+    {% endif %}
+  </div>
+
+  {% if page.status != 'live' %}
+  <p class="service-empty">Not deployed yet. This page gets an Open button once the service has an address.</p>
+  {% endif %}
+
+  {% if page.preview == 'burgers' %}
+  {% include burgers-preview.html %}
+  {% endif %}
+
+  {% if page.embed and page.status == 'live' %}
+  <div class="service-embed">
+    <iframe src="{{ page.service_url }}" title="{{ page.title | escape }}" loading="lazy"></iframe>
+  </div>
+  {% endif %}
+
+  <dl class="facts">
+    {% if page.stack %}<div><dt>Built with</dt><dd>{{ page.stack | join: " · " }}</dd></div>{% endif %}
+    {% if page.status == 'live' %}<div><dt>Address</dt><dd>{{ page.service_url | remove: "https://" }}</dd></div>{% endif %}
+    <div><dt>Runs on</dt><dd>my own machine, through Tailscale Funnel</dd></div>
+  </dl>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>
